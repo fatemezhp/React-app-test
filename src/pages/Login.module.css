@@ -1,0 +1,35 @@
+.loginContainer {
+    box-shadow:20px rgb(46, 225, 14) ;
+    height: 70vh;
+    /* width: 50%;  */
+    place-items: center;
+  
+   
+}
+
+.form {
+    margin-top: 5%;
+    box-shadow: -1px -1px 7px 4px #f9f9f9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(157, 153, 153, 0.114);
+    padding: 5rem;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.form button {
+    background-color: rgba(37, 8, 8, 0.271);
+    margin-top: 20%;
+}
+
+.form button:hover {
+    background-color: rgba(3, 154, 111, 0.918);
+    color: white;
+}
+.form input {
+    border: 1px solid gray;
+    border-radius: 25px;
+    padding: 2%;
+}

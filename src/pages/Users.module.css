@@ -1,0 +1,64 @@
+.loading {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading span {
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    z-index: 1;
+    mix-blend-mode: difference;
+}
+
+.loading::before {
+    content: "";
+    width: 100px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: move 4s linear infinite;
+    z-index: -1;
+}
+
+@keyframes move {
+    0%,
+    100% {
+        left: 0;
+    }
+    50% {
+        left: calc(100% - 100px);
+    }
+}
+
+.gridArea {
+    place-content: center;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    background: #9242cf;
+    color: #fff;
+    padding: 20px;
+    border-radius: 17px;
+}
+.userimg {
+    width: 30%;
+    border-radius: 10px;
+}
+.userinfo {
+    
+}

@@ -1,0 +1,25 @@
+/* default styles (mobile first) */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* medium screens and up */
+
+@media (min-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+
+/* large screens and up */
+
+@media (min-width: 1280px) {
+    .container {
+        width: 80%;
+    }
+}

@@ -6,6 +6,7 @@ function Login() {
   // const [userName, setUserName] = useState('')
   const [userEmail, setUserEmail] = useState('')
   const [userPass, setUserPass] = useState('')
+  const [loginError, setLoginError] = useState(false)
 
   const loginHandler = async () => {
     let params = {
@@ -16,11 +17,15 @@ function Login() {
 
       const response = await axios.post('https://reqres.in/api/login', params);
       console.log('Login successful!');
-      console.log('Token:', response.data.token)
+      const token = response.data.token;
+      console.log('Token:', token)
+      
+      setLoginError(false);
     }
     catch (error) {
       if (error.response) {
         console.error('Login failed:', error.response.data.error);
+        setLoginError(true);
       } else {
         console.error('Error:', error.message);
       }
@@ -54,7 +59,7 @@ function Login() {
             id="userpass"
           />
         </label>
-
+        { loginError &&  <div className={syl.loginError}><p>There is something wrong with Email or password!</p></div>}
         <button onClick={loginHandler}>submit</button>
       </div>
     </div>

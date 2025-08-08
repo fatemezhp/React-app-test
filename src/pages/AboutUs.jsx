@@ -2,7 +2,7 @@ import React from 'react'
 
 function AboutUs() {
   return (
-    <div><h1>just cock</h1></div>
+    <div><h1>learn more about us</h1></div>
   )
 }
 

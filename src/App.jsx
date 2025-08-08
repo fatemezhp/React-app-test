@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import Login from './pages/Login'
 import Users from './pages/Users'
+import Products from './components/Products'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path='/aboutUs' element={<AboutUs />} />
           <Route path='/login' element={<Login />} />
           <Route path='/users' element={<Users />} />
+          <Route path='/products' element={<Products />} />
         </Routes>
       </Layout>
     </div>

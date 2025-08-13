@@ -16,7 +16,7 @@ function Product() {
   const addToCartHandler = (product) => {
     console.log(product);
     disPatch(addToCart(product))
-  }
+  } 
 
   const getProdcts = async () => {
     try {

@@ -6,6 +6,7 @@ import AboutUs from './pages/AboutUs'
 import Login from './pages/Login'
 import Users from './pages/Users'
 import Products from './components/Products'
+import Cart from './components/Cart'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/users' element={<Users />} />
           <Route path='/products' element={<Products />} />
+          <Route path='/Cart' element={ <Cart />} />
         </Routes>
       </Layout>
     </div>

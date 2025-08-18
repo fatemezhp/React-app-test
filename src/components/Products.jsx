@@ -14,7 +14,7 @@ function Product() {
   const navigate = useNavigate();
 
   const addToCartHandler = (product) => {
-    console.log(product);
+   
     disPatch(addToCart(product))
   } 
 
@@ -50,8 +50,9 @@ function Product() {
           {products.map((product) => (
             <ProductCard key={product.id}
              product={product}
-             addToCart={() => addToCartHandler(product)} />
-
+             onAction={() => addToCartHandler(product)}
+             actionLabel="add to cart" />
+           
           ))}
         </div>
       }

@@ -1,6 +1,6 @@
 import React from 'react'
 import './products.css'
-function ProductCard({ product, addToCart }) {
+function ProductCard({ product, onAction, actionLabel }) {
     return (
         <>
             <div className='productCard' key={product.id}>
@@ -8,7 +8,7 @@ function ProductCard({ product, addToCart }) {
                 <div className='caption'>
                     <div><p>{product.title}</p>
                         <h3>{product.price} t</h3></div>
-                    <button onClick={addToCart}>add to cart</button>
+                    <button onClick={onAction}>{actionLabel}</button>
                 </div>
             </div>
         </>

@@ -2,16 +2,18 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import ProductCard from './productCard';
 import { useDispatch } from 'react-redux';
-import {removeFromCart } from'../store/cart.js'
+import {removeFromCart} from'../store/cart.js'
 function Cart() {
-  const dispatch = useDispatch()
   const cart = useSelector((state) => state.cart);
-  
+  const dispatch = useDispatch()
+
+ 
   return (
     cart.map((product) =>
       <ProductCard
         product={product}
-        onAction={() => dispatch(removeFromCart(product.id))}
+        key={product.id}
+        onAction={() => dispatch(removeFromCart(product))}
         actionLabel="remove from cart" />)
   )
 }

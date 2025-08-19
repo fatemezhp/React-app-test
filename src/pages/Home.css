@@ -1,0 +1,14 @@
+.homeWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+
+}
+.Hello{
+    font-weight: bolder;
+    place-content: center;
+    flex:1;
+    font-size:7rem;
+    color:rgb(5, 18, 57);
+    background-color:lightskyblue;
+}

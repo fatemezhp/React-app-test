@@ -7,16 +7,13 @@ import ProductCard from './productCard'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../store/cart'
 function Product() {
+
   const [products, setProducts] = useState([])
+  const [isInCart, setIsInCart] = useState([])
   const [loading, setLoading] = useState(true)
 
-  const disPatch = useDispatch();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const addToCartHandler = (product) => {
-   
-    disPatch(addToCart(product))
-  } 
 
   const getProdcts = async () => {
     try {
@@ -35,11 +32,20 @@ function Product() {
 
   }, [])
 
-
+  const addHandler = (product) => {
+    dispatch(addToCart(product))
+    const isincart = products.some((item) => item.id == product.id)
+    if (isincart) {
+      setIsInCart([...isInCart, product])
+      console.log(isInCart);
+    }
+    else {}
+  }
 
   return (
     <div className="wrapper">
       <button onClick={() => (navigate(-1))}>close products</button>
+
       {loading
         ? <div className=''>
           <span>
@@ -47,13 +53,17 @@ function Product() {
           </span>
         </div>
         : <div className='productsSction'>
-          {products.map((product) => (
-            <ProductCard key={product.id}
-             product={product}
-             onAction={() => addToCartHandler(product)}
-             actionLabel="add to cart" />
-           
-          ))}
+
+          {products.map((product) => {
+
+            return (
+              <ProductCard key={product.id}
+                product={product}
+                onAction={() => addHandler(product)}
+                actionLabel={isInCart ? "Already in Cart" : "Add to Cart"} />
+            )
+          }
+          )}
         </div>
       }
     </div>

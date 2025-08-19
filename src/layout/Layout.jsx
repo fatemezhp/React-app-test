@@ -8,12 +8,12 @@ function Layout({ children }) {
             <header className={`${styles.header}`}>
                 <div className={styles.navbar}>
                     <div className={styles.nleft}>
-                        <Link className={styles.header_active} to='/'><a>home</a></Link>
-                        <Link className={styles.header_active} to='/aboutUs'><a>about us</a></Link>
+                        <Link className={styles.header_active} to='/'>home</Link>
+                        <Link className={styles.header_active} to='/aboutUs'>about us</Link>
 
                     </div>
                     <div className={styles.nright}>
-                        <Link className={styles.header_active} to='/login'><a>login</a></Link>
+                        <Link className={styles.header_active} to='/login'>login</Link>
                         <Link to='/cart' className={styles.carticon} >
                             <svg fill="#000000" width="100px" height="50px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M216,64l-12.15674,66.8623A16,16,0,0,1,188.10156,144H62.54541L48,64Z" opacity="0.2" />

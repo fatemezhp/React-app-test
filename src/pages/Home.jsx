@@ -28,18 +28,20 @@ function Home() {
           rootMargin="-100px"
           textAlign="center"
         />
-        <div>
+        <div className='options'>
+        <div className="box">
           <AnimatedContent
+            className='content'
             distance={150}
             direction="horizontal"
-            reverse={false}
-            duration={1.2}
+            reverse={true}
+            duration={2}
             ease="bounce.out"
-            initialOpacity={0.2}
+            initialOpacity={0.1}
             animateOpacity
-            scale={1.1}
+            scale={1}
             threshold={0.2}
-            delay={0.3}
+            delay={0.1}
           >
             <button 
               onClick={() =>
@@ -47,25 +49,28 @@ function Home() {
               open users
             </button>
           </AnimatedContent>
-
-          <AnimatedContent
+          </div>
+          <div className="box">
+            <AnimatedContent
+            className='content'
             distance={150}
             direction="horizontal"
             reverse={false}
-            duration={1.2}
+            duration={2}
             ease="bounce.out"
-            initialOpacity={0.2}
+            initialOpacity={0.1}
             animateOpacity
-            scale={1.1}
+            scale={1}
             threshold={0.2}
-            delay={0.3}
+            delay={0.1}
           >
-            <button 
+          <button 
               onClick={() =>
                 (navigate('/products', { state: { fromHome: true } }))}>
               open products
             </button>
-          </AnimatedContent>
+            </AnimatedContent>
+            </div>
         </div>
       </div>
 
